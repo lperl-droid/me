@@ -19,18 +19,23 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 some_words = ["what", "does", "this", "line", "do", "?"]
 
+# prints each item of the list on a new line
 for word in some_words:
     print(word)
 
+# prints each item of the list on a new line
 for x in some_words:
     print(x)
 
+# print some_words as a list on one line
 print(some_words)
 
+#if the length of some_words is >3, let the user know it has more than 3 words
 if len(some_words) > 3:
     print("some_words contains more than 3 words")
 
-
+# print the system, node, release, version, date in UTC and the CPU 
+# of the user
 def usefulFunction():
     """
     You may want to look up what uname does before you guess

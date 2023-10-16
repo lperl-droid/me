@@ -8,6 +8,10 @@ Modify each function until the tests pass.
 
 
 def is_odd(a_number):
+    if a_number%2==1:
+        return  True
+    else:
+        return False
     """Return True if a_number is odd, and False if a_number is even.
 
     Look into modulo division using the '%' operator as one way of doing this.
@@ -22,6 +26,17 @@ def is_odd(a_number):
 
 
 def fix_it(moves=True, should_move=True):
+    if moves==True:
+        if should_move==True:
+            return "No Problem"
+        else:
+            return "WD-40"
+    else:
+        if should_move==True: 
+            return "Duct Tape"
+        else:
+            return "No Problem"
+    
     """Decide what to do.
 
     Using the engineering flowchart (in week2 folder of the CODE1161-2019
@@ -59,7 +74,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -72,7 +90,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
+    item_list = []
+    for i in range(number_of_items+1):
+        item_list.append(symbol)
+    return item_list
 
 
 def loops_2_preview():
@@ -114,7 +135,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append("*")
+        field.append(row)
+    return field
 
 
 def loops_3():
@@ -138,7 +165,16 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    block = 0
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(block)
+        field.append(row)
+        block = block+1
+    return field
+
 
 
 def loops_4():
@@ -158,7 +194,16 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    sequence = 0
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(sequence)
+            sequence = sequence+1
+        field.append(row)
+        sequence = 0
+    return field
 
 
 def loops_5():
@@ -190,7 +235,6 @@ def loops_5():
     """
     return None
 
-
 def loops_6():
     """Make a wedge of numbers.
 
@@ -211,7 +255,16 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    sequence = 0
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(sequence)
+            sequence = sequence+1
+        field.append(row)
+        sequence = 0
+    return field
 
 
 def loops_7():
